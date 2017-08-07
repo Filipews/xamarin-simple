@@ -5,13 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Simplest
+namespace Simplest.View
 {
-	public partial class MainPage : ContentPage
+	public class BaseView : ContentPage
 	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
 	}
 }

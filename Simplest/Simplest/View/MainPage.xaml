@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<v:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			xmlns:local="clr-namespace:Simplest"
+			xmlns:v="clr-namespace:Simplest.View"
+			xmlns:vm="clr-namespace:Simplest.ViewModel"
+			x:Class="Simplest.View.MainPage">
+	<ContentPage.BindingContext>
+		<vm:MainViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0"
+				   Text="{Binding CurrentUser.Name, StringFormat='Hello, {0}!'}"
+				   VerticalOptions="Center"
+				   HorizontalOptions="Center" />
+			<Button Grid.Row="1"
+					Text="Change user"
+					Command="{Binding ChangeUserCommand}" />
+		</Grid>
+	</ContentPage.Content>
+</v:BaseView>

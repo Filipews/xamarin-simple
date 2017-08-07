@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Simplest.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace Simplest
 {
 	public partial class App : Application
@@ -13,7 +16,7 @@ namespace Simplest
 		{
 			InitializeComponent();
 
-			MainPage = new Simplest.MainPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart()
